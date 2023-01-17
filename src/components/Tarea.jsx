@@ -1,5 +1,4 @@
-import Formulario from "./Formulario";
-import ListadoTarea from "./ListadoTarea";
+
 const Tarea = ( { tarea }) => {
     const {nombre, puesto, fecha, descripcion} = tarea
 

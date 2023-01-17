@@ -37,7 +37,7 @@ const Formulario = ({ tareas, setTareas }) => {
                 id: generarId()
             }
  
-            setTareas([ ... tareas, objetoTareas]) //se evita q se muten y toma una copia y agrega un nuevo objeto
+            setTareas([...tareas, objetoTareas]) //se evita q se muten y toma una copia y agrega un nuevo objeto
             //reiniciar formulario, cada vez que se hace el submit deben vaciarse los campos
 
             setNombre('')
