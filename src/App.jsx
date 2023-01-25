@@ -6,7 +6,6 @@ import ListadoTarea from './components/ListadoTarea'
 
 function App() {
 
-
   const [ tareas, setTareas] = useState([])
 
     return (
