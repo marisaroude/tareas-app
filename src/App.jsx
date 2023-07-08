@@ -10,17 +10,17 @@ function App() {
 
     return (
       <>
-      <div className="container mx-auto mt-20 flex:wrap"> {/* mt: margin top */}
-      <Header />
-      <div className='mt-12 md:flex'>
-        <Formulario
-          tareas ={tareas}
-          setTareas = {setTareas}
-        /> 
-        <ListadoTarea 
-        tareas= {tareas}
-        setTareas = {setTareas}/>
-      </div>
+      <div className="container mx-auto mt-5 flex:wrap "> {/* mt: margin top */}
+        <Header />
+        <div className='mt-12 md:flex '>
+          <Formulario
+            tareas ={tareas}
+            setTareas = {setTareas}
+          /> 
+          <ListadoTarea 
+          tareas= {tareas}
+          setTareas = {setTareas}/>
+        </div>
       </div>
       </>
     )

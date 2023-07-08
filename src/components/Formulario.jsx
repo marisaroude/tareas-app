@@ -7,7 +7,7 @@ const Formulario = ({ tareas, setTareas }) => {
     const [ fecha, setFecha] = useState('')
     const [ descripcion, setDescripcion] = useState('')
     const [ error, setError] = useState (false)
-   
+    
     const generarId = () => {
         const random = Math.random().toString(36).substring(2)
         const fecha = Date.now().toString(36)
@@ -21,9 +21,6 @@ const Formulario = ({ tareas, setTareas }) => {
         if ([nombre, puesto, fecha, descripcion].includes('')){
             console.log('Hay al menos un campo vacio')
             setError(true)
-
-            //objeto de tareas
-            
         }else{
             console.log('Todos llenos')
             setError(false)
@@ -53,10 +50,10 @@ const Formulario = ({ tareas, setTareas }) => {
     
 
     return (
-        <div className="w-1/2 lg:w-2/5">
-            <h2 className="font-black text-3xl text-center">Seguimiento de tareas</h2>    
+        <div className="px-5 py-5 lg:w-2/5">
+            <h2 className="font-black sm:text-3xl text-2xl  text-center ">Seguimiento de tareas</h2>    
 
-            <p className="text-lg mt-5 text-center">
+            <p className="text-lg mt-5 mb-5 text-center">
                 Añade tareas y {" "}
                 <span className="text-indigo-600 font-bold">Administralas</span>
             </p>
@@ -66,8 +63,8 @@ const Formulario = ({ tareas, setTareas }) => {
                 className="bg-white shadow-md text-left">
 
                 { error && 
-                <div className='bg-red-800 text-white text-center p-3-uppercase font-bold mb-3 rounded-md'>
-                    <p>Error</p>
+                <div className=' text-red-800 text-left p-3-uppercase font-bold mb-3 mt-3 rounded-md'>
+                    <p>Debe completar todos los campos</p>
                 </div>
                 }
                 <div className="mb-5">
@@ -120,7 +117,7 @@ const Formulario = ({ tareas, setTareas }) => {
 
                 <input
                     type="submit"
-                    className="bg-indigo-600 w-full p-3 text-white uppercase font-bold hover:bg-indigo-700 cursor-pointer transitions-color"
+                    className="mb-5 bg-indigo-600 w-full p-3 text-white uppercase font-bold hover:bg-indigo-700 cursor-pointer transitions-color rounded-md"
                 />
             </form>
         </div>
